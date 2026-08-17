@@ -2,16 +2,20 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+/* Índices das layers (usados nos &lt) */
 #define DEFAULT  0
-#define ONE 1
-#define TWO 2
-#define THREE 3
+#define ONE      1
+#define TWO      2
+#define THREE    3
 
+/* Ajustes aos comportamentos “stock” */
 &soft_off {
-    hold-time-ms = <2000>; // Only turn off it the key is held for 2 seconds or longer.
+    hold-time-ms = <2000>; /* Desliga se a tecla for mantida 2s. */
 };
 
-&mt { tapping-term-ms = <200>; };
+&mt {
+    tapping-term-ms = <200>;
+};
 
 / {
     macros {
