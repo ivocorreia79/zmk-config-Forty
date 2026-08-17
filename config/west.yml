@@ -1,13 +1,15 @@
 manifest:
+  defaults:
+    revision: e4fb39d4a6514fe90d44b1570f908bddc5df0ad2  # Exemplo: commit fixo do ZMK main com Studio (substitui pelo commit/tag que preferires)
+
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
       import: app/west.yml
+
   self:
     path: config
